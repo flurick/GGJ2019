@@ -1,0 +1,5 @@
+.collabignore
+Library/*
+Logs/*
+Packages/*
+Temp/*
