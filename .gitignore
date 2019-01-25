@@ -4,3 +4,5 @@ Logs/*
 Packages/*
 Temp/*
 .vs/*
+obj/*
+Assembly-CSharp.csproj
