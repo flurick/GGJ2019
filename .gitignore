@@ -4,3 +4,8 @@ Logs/*
 Packages/*
 Temp/*
 .vs/*
+obj/*
+Assembly-CSharp.csproj
+*.csproj
+.vs/GGJ2019/v15/Server/sqlite3/storage.ide
+GGJ2019.sln
