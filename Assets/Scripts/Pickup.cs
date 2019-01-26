@@ -14,6 +14,10 @@ public class Pickup : MonoBehaviour
 
     void Start()
     {
+        maxHeat = 100f;
+        maxWater = 100f;
+        waterGain = 30f;
+        heatGain = 10f; 
         animator = GetComponent<Animator>();
       //  this.GetComponent<SpriteRenderer>().sprite = mySprite; 
 
@@ -46,12 +50,7 @@ public class Pickup : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
 
-
-
-    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -81,7 +80,7 @@ public class Pickup : MonoBehaviour
             Debug.Log("It Works");
             Destroy(collision.gameObject);
 
-            water = +waterGain;
+            water =+ waterGain;
             Debug.Log(water);
 
 
