@@ -28,13 +28,18 @@ public class Pickup : MonoBehaviour
 
     void Update()
     {
-        if (heatToggle && heat < maxHeat)
+        if (heatToggle)
         {
             heat += heatGain * Time.deltaTime;
             water -= waterLoss * Time.deltaTime;
 
             animator.SetFloat("heat", heat);
             Debug.Log("can you see me");
+
+            if (heat > maxHeat)
+            {
+                heat = maxHeat; 
+            }
 
         }
 
@@ -82,11 +87,6 @@ public class Pickup : MonoBehaviour
 
             }
 
-            else
-            {
-                Debug.Log("can you see me");
-                heatToggle = false;
-            }
         }
 
         else if (collision.gameObject.tag == "Water")
@@ -129,6 +129,7 @@ public class Pickup : MonoBehaviour
             Debug.Log("i've exited");
             heatLoss = 10f; 
             heatToggle = false;
+            Debug.Log("I've exited");
 
         }
 
