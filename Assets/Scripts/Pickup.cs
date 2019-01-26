@@ -6,7 +6,8 @@ public class Pickup : MonoBehaviour
 {
     public float water, maxWater, waterGain, waterLoss;
     public float heat, heatGain, maxHeat, heatLoss;
-    public bool heatToggle = false;
+    public bool heatToggle,blackHoleToggle,earthLives = false;
+  
 
     public Sprite mySprite; 
     public SpriteRenderer spriteR;
@@ -14,6 +15,8 @@ public class Pickup : MonoBehaviour
 
     void Start()
     {
+        heat = 100f;
+        water = 100f; 
         maxHeat = 100f;
         maxWater = 100f;
         waterGain = 30f;
@@ -42,6 +45,17 @@ public class Pickup : MonoBehaviour
             animator.SetFloat("heat", heat);
         }
 
+        else if (blackHoleToggle)
+        {
+            heat -= heatLoss * Time.deltaTime;
+            water -= waterLoss * Time.deltaTime;
+        }
+
+        else if (!earthLives)
+        {
+
+        }
+
         else
         {
             heatToggle = false;
@@ -60,8 +74,10 @@ public class Pickup : MonoBehaviour
             {
                 heatToggle = true;
 
+
                 if (heatToggle && heat >= maxHeat)
                 {
+                    heatLoss = 0f; 
                     heatToggle = false;
                 }
 
@@ -87,6 +103,10 @@ public class Pickup : MonoBehaviour
 
         }
 
+        else if (collision.gameObject.tag == "Blackhole")
+        {
+            blackHoleToggle = true; 
+        }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
@@ -96,9 +116,15 @@ public class Pickup : MonoBehaviour
             {
                 heat = maxHeat;
             }
+            heatLoss = 10f; 
             heatToggle = false;
 
         }
+
+    }
+
+    void PlayerDeath()
+    {
 
     }
 
