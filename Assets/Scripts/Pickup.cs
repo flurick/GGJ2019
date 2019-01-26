@@ -33,7 +33,7 @@ public class Pickup : MonoBehaviour
             heat += heatGain * Time.deltaTime;
             water -= waterLoss * Time.deltaTime;
 
-            animator.SetFloat("heat", heat); 
+            animator.SetFloat("heat", heat);
             Debug.Log("can you see me");
 
         }
@@ -47,13 +47,13 @@ public class Pickup : MonoBehaviour
 
         else if (blackHoleToggle)
         {
-            heat -= heatLoss * Time.deltaTime;
-            water -= waterLoss * Time.deltaTime;
+            heat -= heatLoss * 2 * Time.deltaTime;
+            water -= waterLoss * 2 * Time.deltaTime;
         }
 
-        else if (!earthLives)
+        else if (heat <= 0 || water <= 0)
         {
-
+            //SceneManager.LoadScene(SceneManager.GetActiveScene());
         }
 
         else
@@ -66,7 +66,7 @@ public class Pickup : MonoBehaviour
 
 
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Star")
         {
@@ -95,9 +95,19 @@ public class Pickup : MonoBehaviour
 
             Debug.Log("It Works");
             Destroy(collision.gameObject);
+            if (water <= maxWater)
+            {
+                water += waterGain;
+                Debug.Log(water);
 
-            water =+ waterGain;
-            Debug.Log(water);
+                if (water >= maxWater)
+                {
+                    water = 100f; 
+                }
+            }
+
+        
+           
 
 
 
@@ -108,7 +118,7 @@ public class Pickup : MonoBehaviour
             blackHoleToggle = true; 
         }
     }
-    void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.tag == "Star")
         {
