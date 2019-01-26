@@ -11,5 +11,6 @@ public class AlignWithSphere : MonoBehaviour
     {
         transform.position = Quaternion.Euler(centerRot) * Vector3.forward * 51;
         transform.eulerAngles = centerRot;
+        //transform.rotation = GameObject.Find("Player").transform.rotation;
     }
 }
