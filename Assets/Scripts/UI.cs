@@ -19,14 +19,16 @@ public class UI : MonoBehaviour
         Earth = Pickup_script.GetComponent<Pickup>();
 
         water = Earth.water;
+        maxWater = Earth.maxWater;
         heat = Earth.heat;
+        maxHeat = Earth.maxHeat;
     }
 
     // Update is called once per frame
     void Update()
     {
         //Update fill amount
-        waterImage.fillAmount = water;
-        warmthImage.fillAmount = heat;
+        waterImage.fillAmount = water/maxWater;
+        warmthImage.fillAmount = heat/maxHeat;
     }
 }
