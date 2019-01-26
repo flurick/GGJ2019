@@ -151,7 +151,7 @@ public class Pickup : MonoBehaviour
 
     void PlayerDeath()
     {
-        
+        SceneManager.LoadScene("Level1", LoadSceneMode.Single);
     }
 
 
