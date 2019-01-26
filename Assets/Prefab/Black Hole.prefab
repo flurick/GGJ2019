@@ -18803,6 +18803,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Hole
       objectReference: {fileID: 0}
+    - target: {fileID: 414588275397603667, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Blackhole
+      objectReference: {fileID: 0}
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
       propertyPath: m_LocalPosition.x
