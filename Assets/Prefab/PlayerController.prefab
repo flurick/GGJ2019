@@ -115,8 +115,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.24, y: 10.24, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.74, y: 3.61, z: 0.2}
+  m_Center: {x: -0.14, y: -0.42, z: 0}
 --- !u!114 &1304000228196970920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,7 +138,7 @@ MonoBehaviour:
   maxHeat: 100
   heatLoss: 10
   heatToggle: 0
-  blackHoleToggle: 0
+  blackHoleToggle: 1
   earthLives: 0
   mySprite: {fileID: 0}
   spriteR: {fileID: 0}
