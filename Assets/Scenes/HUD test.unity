@@ -380,5 +380,56 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3587244442825541092, guid: 1e43f8557bee90d46b5dbcecbb50d5dc,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e43f8557bee90d46b5dbcecbb50d5dc, type: 3}
+--- !u!1 &3587244442819752810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3587244444361408636, guid: 1e43f8557bee90d46b5dbcecbb50d5dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 3587244442819752809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3587244442819752811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3587244442819752810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106f03403ba68eb4aaaef64d2f7d19a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterImage: {fileID: 3587244442819752815}
+  warmthImage: {fileID: 3587244442819752814}
+  waterLevel: 0
+  warmthLevel: 0
+--- !u!114 &3587244442819752814 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3587244442825541092, guid: 1e43f8557bee90d46b5dbcecbb50d5dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 3587244442819752809}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3587244442819752815 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3587244444663924207, guid: 1e43f8557bee90d46b5dbcecbb50d5dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 3587244442819752809}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
