@@ -385,6 +385,7 @@ GameObject:
   - component: {fileID: 3587244444361408625}
   - component: {fileID: 3587244444361408638}
   - component: {fileID: 3587244444361408639}
+  - component: {fileID: 475859990282903258}
   m_Layer: 5
   m_Name: HUD Canvas
   m_TagString: Untagged
@@ -485,6 +486,24 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &475859990282903258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3587244444361408636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106f03403ba68eb4aaaef64d2f7d19a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  water: 0
+  maxWater: 0
+  heat: 0
+  maxHeat: 0
+  Pickup_script: {fileID: 0}
+  Earth: {fileID: 0}
 --- !u!1 &3587244444513181282
 GameObject:
   m_ObjectHideFlags: 0

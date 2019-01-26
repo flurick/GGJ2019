@@ -112,6 +112,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &948981756 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3587244444663924207, guid: 1e43f8557bee90d46b5dbcecbb50d5dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 3587244442819752809}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1414517959
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,6 +206,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1983296656 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3587244442825541092, guid: 1e43f8557bee90d46b5dbcecbb50d5dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 3587244442819752809}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3587244442819752809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -316,24 +340,35 @@ PrefabInstance:
       propertyPath: m_FillAmount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 475859990282903258, guid: 1e43f8557bee90d46b5dbcecbb50d5dc,
+        type: 3}
+      propertyPath: maxWater
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 475859990282903258, guid: 1e43f8557bee90d46b5dbcecbb50d5dc,
+        type: 3}
+      propertyPath: water
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 475859990282903258, guid: 1e43f8557bee90d46b5dbcecbb50d5dc,
+        type: 3}
+      propertyPath: waterImage
+      value: 
+      objectReference: {fileID: 948981756}
+    - target: {fileID: 475859990282903258, guid: 1e43f8557bee90d46b5dbcecbb50d5dc,
+        type: 3}
+      propertyPath: warmthImage
+      value: 
+      objectReference: {fileID: 1983296656}
+    - target: {fileID: 475859990282903258, guid: 1e43f8557bee90d46b5dbcecbb50d5dc,
+        type: 3}
+      propertyPath: maxWarmth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 475859990282903258, guid: 1e43f8557bee90d46b5dbcecbb50d5dc,
+        type: 3}
+      propertyPath: warmth
+      value: 75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e43f8557bee90d46b5dbcecbb50d5dc, type: 3}
---- !u!1 &3587244442819752810 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3587244444361408636, guid: 1e43f8557bee90d46b5dbcecbb50d5dc,
-    type: 3}
-  m_PrefabInstance: {fileID: 3587244442819752809}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3587244442819752811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3587244442819752810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 106f03403ba68eb4aaaef64d2f7d19a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Pickup_script: {fileID: 0}
