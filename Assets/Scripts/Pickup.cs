@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     public float water, maxWater, waterGain, waterLoss;
-    public float heat, heatGain, heatLimit, heatLoss;
+    public float heat, heatGain, maxHeat, heatLoss;
     public bool heatToggle = false;
 
 
@@ -17,7 +17,7 @@ public class Pickup : MonoBehaviour
 
     void Update()
     {
-        if (heatToggle && heat < heatLimit)
+        if (heatToggle && heat < maxHeat)
         {
             heat += heatGain * Time.deltaTime;
             water -= waterLoss * Time.deltaTime;
@@ -51,11 +51,11 @@ public class Pickup : MonoBehaviour
     {
         if (collision.gameObject.tag == "Star")
         {
-            if (heatToggle == false && heat < heatLimit)
+            if (heatToggle == false && heat < maxHeat)
             {
                 heatToggle = true;
 
-                if (heatToggle && heat >= heatLimit)
+                if (heatToggle && heat >= maxHeat)
                 {
                     heatToggle = false;
                 }
@@ -87,9 +87,9 @@ public class Pickup : MonoBehaviour
     {
         if (collision.gameObject.tag == "Star")
         {
-            if (heat > heatLimit)
+            if (heat > maxHeat)
             {
-                heat = heatLimit;
+                heat = maxHeat;
             }
             heatToggle = false;
 
