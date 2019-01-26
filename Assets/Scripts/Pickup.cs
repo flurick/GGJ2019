@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pickup : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Pickup : MonoBehaviour
 
     void Start()
     {
+      
         heat = 100f;
         water = 100f; 
         
@@ -55,6 +57,11 @@ public class Pickup : MonoBehaviour
 
                 water -= waterLoss * Time.deltaTime; 
             }
+
+            else if(water <= 0 || heat <= 0)
+            {
+                PlayerDeath();
+            }
         }
 
 
@@ -67,6 +74,8 @@ public class Pickup : MonoBehaviour
    
 
     }
+
+
 
 
 
@@ -142,7 +151,7 @@ public class Pickup : MonoBehaviour
 
     void PlayerDeath()
     {
-
+        
     }
 
 
