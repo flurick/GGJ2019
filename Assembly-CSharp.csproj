@@ -55,6 +55,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AlignWithSphere.cs" />
      <Compile Include="Assets\Scripts\Dummy.cs" />
+     <Compile Include="Assets\Scripts\ExitOnClick.cs" />
+     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
      <Compile Include="Assets\Scripts\Pickup.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\UI.cs" />

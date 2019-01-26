@@ -11,7 +11,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.09999999
+  m_Radius: 7
   m_Center: {x: 0, y: -0.0000003874302, z: 0}
 --- !u!1 &6152861790356841889
 GameObject:
@@ -297,8 +297,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.5
-      minScalar: 0.5
+      scalar: 15
+      minScalar: 5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -5005,7 +5005,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 30
+      scalar: 300
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -9431,10 +9431,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Star
       objectReference: {fileID: 0}
+    - target: {fileID: 414588275397603667, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Star
+      objectReference: {fileID: 0}
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 17.200243
       objectReference: {fileID: 0}
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
@@ -9444,7 +9449,7 @@ PrefabInstance:
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 51
+      value: -48.011993
       objectReference: {fileID: 0}
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
@@ -9454,7 +9459,7 @@ PrefabInstance:
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.98524404
       objectReference: {fileID: 0}
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
@@ -9464,7 +9469,7 @@ PrefabInstance:
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.1711554
       objectReference: {fileID: 0}
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
@@ -9486,23 +9491,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 414588275397603670, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
+    - target: {fileID: 414588275397603671, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 6adeaf345e57e7341b2ac26bcdb97866,
-        type: 3}
-    - target: {fileID: 414588275397603670, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.85490197
+      propertyPath: centerRot.y
+      value: -199.71
       objectReference: {fileID: 0}
-    - target: {fileID: 414588275397603670, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.4117647
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 414588275397603670, guid: 1e393b8a507a96a48b5dbf9c499ab6d8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1e393b8a507a96a48b5dbf9c499ab6d8, type: 3}
 --- !u!1 &4229937935203709783 stripped
 GameObject:
