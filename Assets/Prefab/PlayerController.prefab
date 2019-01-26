@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 879275661}
   - component: {fileID: 521295728}
   - component: {fileID: 521295727}
-  - component: {fileID: 7499532916457976390}
   - component: {fileID: 1304000228196970920}
   - component: {fileID: 773331905}
+  - component: {fileID: 707678683957252765}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -104,19 +104,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &7499532916457976390
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521295726}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.74, y: 3.61, z: 0.2}
-  m_Center: {x: -0.14, y: -0.42, z: 0}
 --- !u!114 &1304000228196970920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,7 +125,7 @@ MonoBehaviour:
   maxHeat: 100
   heatLoss: 10
   heatToggle: 0
-  blackHoleToggle: 1
+  blackHoleToggle: 0
   earthLives: 0
   mySprite: {fileID: 0}
   spriteR: {fileID: 0}
@@ -159,6 +146,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &707678683957252765
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521295726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.84
+  m_Center: {x: -0.12, y: -0.35, z: 0}
 --- !u!1 &635701122
 GameObject:
   m_ObjectHideFlags: 0
