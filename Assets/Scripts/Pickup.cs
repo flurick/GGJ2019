@@ -25,7 +25,7 @@ public class Pickup : MonoBehaviour
         heatGain = 10f; 
         animator = GetComponent<Animator>();
       //  this.GetComponent<SpriteRenderer>().sprite = mySprite; 
-
+      //Comment
     }
 
     void Update()
