@@ -41,7 +41,20 @@ public class Pickup : MonoBehaviour
             if (heat > maxHeat)
             {
                 heat = maxHeat; 
+                 if (water <= 0 || heat <= 0)
+                {
+                    PlayerDeath();
+                }
+
             }
+
+            else if (water <= 0 || heat <= 0)
+            {
+                PlayerDeath();
+            }
+
+
+
 
         }
 
