@@ -311,6 +311,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 499305053839428556, guid: 488ff6d3818abcd488055b57a06d17b4,
+        type: 3}
+      propertyPath: water
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 499305053839428556, guid: 488ff6d3818abcd488055b57a06d17b4,
+        type: 3}
+      propertyPath: warmth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3973741254341905463, guid: 488ff6d3818abcd488055b57a06d17b4,
         type: 3}
       propertyPath: m_FillAmount
