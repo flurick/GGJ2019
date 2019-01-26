@@ -11,13 +11,17 @@ public class AlignEditor : Editor
         AlignWithSphere origin = (target as AlignWithSphere);
 
         EditorGUI.BeginChangeCheck();
-        Quaternion rotx = Handles.Disc(origin.centerRot, Vector3.zero, new Vector3(1, 0, 0), origin.transform.position.z, false, 1);
-        Quaternion roty = Handles.Disc(origin.centerRot, Vector3.zero, new Vector3(0, 1, 0), origin.transform.position.z, false, 1);
+
+        Quaternion originRot = Quaternion.Euler(origin.centerRot);
+        Quaternion rotx = Handles.Disc(originRot, Vector3.zero, originRot * new Vector3(1, 0, 0), 50, false, 1);
+        Quaternion roty = Handles.Disc(originRot, Vector3.zero, originRot * new Vector3(0, 1, 0), 50, false, 1);
         if (EditorGUI.EndChangeCheck())
         {
-            Undo.RecordObject(target, "Rotated arond point");
-            EditorUtility.SetDirty(target);
-            origin.transform.rotation = rotx * roty;
+            Vector3 rotAxis = rotx.eulerAngles + roty.eulerAngles;
+            origin.transform.eulerAngles = rotAxis;
+            origin.centerRot = rotAxis;
+            Undo.RecordObject(origin, "Rotated arond point");
+            EditorUtility.SetDirty(origin);
         }
     }
 }
