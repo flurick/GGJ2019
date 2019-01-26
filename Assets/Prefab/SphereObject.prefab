@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2073dfc93fbf844438fa07b6ff41e556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  centerRot: {x: -15.18, y: -174.18, z: 1}
+  centerRot: {x: 0, y: 0, z: 0}
 --- !u!212 &414588275397603670
 SpriteRenderer:
   m_ObjectHideFlags: 0

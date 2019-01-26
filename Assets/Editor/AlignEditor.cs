@@ -18,7 +18,6 @@ public class AlignEditor : Editor
         if (EditorGUI.EndChangeCheck())
         {
             Vector3 rotAxis = rotx.eulerAngles + roty.eulerAngles;
-            //origin.transform.eulerAngles = rotAxis;
             origin.centerRot = rotAxis;
             Undo.RecordObject(origin, "Rotated arond point");
             EditorUtility.SetDirty(origin);
