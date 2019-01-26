@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;   //Required when using UI elements
 
 public class UI : MonoBehaviour
@@ -8,24 +6,31 @@ public class UI : MonoBehaviour
     public Image waterImage;
     public Image warmthImage;
 
-    public float waterLevel;
-    public float warmthLevel;
+    public float water;
+    public float maxWater;
+    public float warmth;
+    public float maxWarmth;
+
+    public Pickup pickupScript;
+    public GameObject Earth;
 
     // Start is called before the first frame update
     void Start()
     {
-        waterLevel = 1;
-        warmthLevel = 1;
+        Debug.Log("UI script start");
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Update fill amount
-        waterImage.fillAmount = waterLevel;
-        warmthImage.fillAmount = warmthLevel;
+        warmth = pickupScript.heat;
+        maxWarmth = pickupScript.maxHeat;
+        water = pickupScript.water;
+        maxWater = pickupScript.maxWater;
 
-        waterLevel -= (float)0.0001;
-        warmthLevel -= (float)0.0001;
+
+        waterImage.fillAmount = water / maxWater;
+        warmthImage.fillAmount = warmth / maxWarmth;
     }
 }

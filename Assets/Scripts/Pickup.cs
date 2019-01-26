@@ -5,24 +5,35 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     public float water, maxWater, waterGain, waterLoss;
-    public float heat, heatGain, heatLimit, heatLoss;
-    public bool heatToggle = false;
+    public float heat, heatGain, maxHeat, heatLoss;
+    public bool heatToggle,blackHoleToggle,earthLives = false;
+  
 
+    public Sprite mySprite; 
+    public SpriteRenderer spriteR;
+    public Animator animator;
 
     void Start()
     {
-
+        heat = 100f;
+        water = 100f; 
+        maxHeat = 100f;
+        maxWater = 100f;
+        waterGain = 30f;
+        heatGain = 10f; 
+        animator = GetComponent<Animator>();
+      //  this.GetComponent<SpriteRenderer>().sprite = mySprite; 
 
     }
 
     void Update()
     {
-        if (heatToggle && heat < heatLimit)
+        if (heatToggle && heat < maxHeat)
         {
             heat += heatGain * Time.deltaTime;
             water -= waterLoss * Time.deltaTime;
 
-
+            animator.SetFloat("heat", heat); 
             Debug.Log("can you see me");
 
         }
@@ -30,6 +41,19 @@ public class Pickup : MonoBehaviour
         else if (!heatToggle)
         {
             heat -= heatLoss * Time.deltaTime;
+
+            animator.SetFloat("heat", heat);
+        }
+
+        else if (blackHoleToggle)
+        {
+            heat -= heatLoss * Time.deltaTime;
+            water -= waterLoss * Time.deltaTime;
+        }
+
+        else if (!earthLives)
+        {
+
         }
 
         else
@@ -40,23 +64,20 @@ public class Pickup : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
 
-
-
-    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Star")
         {
-            if (heatToggle == false && heat < heatLimit)
+            if (heatToggle == false && heat < maxHeat)
             {
                 heatToggle = true;
 
-                if (heatToggle && heat >= heatLimit)
+
+                if (heatToggle && heat >= maxHeat)
                 {
+                    heatLoss = 0f; 
                     heatToggle = false;
                 }
 
@@ -75,25 +96,35 @@ public class Pickup : MonoBehaviour
             Debug.Log("It Works");
             Destroy(collision.gameObject);
 
-            water = +waterGain;
+            water =+ waterGain;
             Debug.Log(water);
 
 
 
         }
 
+        else if (collision.gameObject.tag == "Blackhole")
+        {
+            blackHoleToggle = true; 
+        }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Star")
         {
-            if (heat > heatLimit)
+            if (heat > maxHeat)
             {
-                heat = heatLimit;
+                heat = maxHeat;
             }
+            heatLoss = 10f; 
             heatToggle = false;
 
         }
+
+    }
+
+    void PlayerDeath()
+    {
 
     }
 
