@@ -8,10 +8,14 @@ public class Pickup : MonoBehaviour
     public float heat, heatGain, heatLimit, heatLoss;
     public bool heatToggle = false;
 
+    public Sprite mySprite; 
+    public SpriteRenderer spriteR;
+    public Animator animator;
 
     void Start()
     {
-
+        animator = GetComponent<Animator>();
+      //  this.GetComponent<SpriteRenderer>().sprite = mySprite; 
 
     }
 
@@ -22,7 +26,7 @@ public class Pickup : MonoBehaviour
             heat += heatGain * Time.deltaTime;
             water -= waterLoss * Time.deltaTime;
 
-
+            animator.SetFloat("heat", heat); 
             Debug.Log("can you see me");
 
         }
@@ -30,6 +34,8 @@ public class Pickup : MonoBehaviour
         else if (!heatToggle)
         {
             heat -= heatLoss * Time.deltaTime;
+
+            animator.SetFloat("heat", heat);
         }
 
         else
