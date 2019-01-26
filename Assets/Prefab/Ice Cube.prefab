@@ -12,10 +12,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ice Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 414588275397603667, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.318126
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
@@ -25,7 +30,7 @@ PrefabInstance:
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -50.472218
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
@@ -35,7 +40,7 @@ PrefabInstance:
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.99740946
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
@@ -45,7 +50,7 @@ PrefabInstance:
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.07193268
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
@@ -75,12 +80,18 @@ PrefabInstance:
     - target: {fileID: 414588275397603671, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
       propertyPath: centerRot.y
-      value: -171.75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 414588275397603671, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
       propertyPath: centerRot.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 414588275397603670, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4d09ea4ca1db013499ecccd0e50dc8dc,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e393b8a507a96a48b5dbf9c499ab6d8, type: 3}
