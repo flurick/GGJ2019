@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Pickup : MonoBehaviour
 {
-    public float water, maxWater, waterGain, waterLoss;
-    public float heat, heatGain, maxHeat, heatLoss;
+    public float water, maxWater, waterGain, waterLoss,blackHoleDamageW;
+    public float heat, heatGain, maxHeat, heatLoss,blackHoleDamageH;
     public bool heatToggle,blackHoleToggle,earthLives = false;
+
+    private float heatTotal; 
+
   
 
     public Sprite mySprite; 
@@ -66,9 +69,15 @@ public class Pickup : MonoBehaviour
 
             if (blackHoleToggle)
             {
-                heatLoss = heatLoss + 10;
+                heatLoss = heatLoss + blackHoleDamageH ;
 
-                water -= waterLoss * Time.deltaTime; 
+                water -= waterLoss + blackHoleDamageW * Time.deltaTime;
+
+             
+                if (water <= 0 || heat <= 0)
+                {
+                    PlayerDeath();
+                }
             }
 
             else if(water <= 0 || heat <= 0)
@@ -103,7 +112,7 @@ public class Pickup : MonoBehaviour
 
                 if (heatToggle && heat >= maxHeat)
                 {
-                    heatLoss = 0f; 
+                    heat = maxHeat ; 
                     heatToggle = false;
                 }
 
@@ -149,7 +158,8 @@ public class Pickup : MonoBehaviour
                 heat = maxHeat;
             }
             Debug.Log("i've exited");
-            heatLoss = 10f; 
+      
+
             heatToggle = false;
             Debug.Log("I've exited");
 
@@ -165,6 +175,12 @@ public class Pickup : MonoBehaviour
     void PlayerDeath()
     {
         SceneManager.LoadScene("Level1", LoadSceneMode.Single);
+    }
+
+
+    void RedHealthLoss()
+    {
+
     }
 
 
