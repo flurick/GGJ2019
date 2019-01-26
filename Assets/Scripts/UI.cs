@@ -5,17 +5,19 @@ public class UI : MonoBehaviour
 {
     private Image waterImage;
     private Image warmthImage;
-    private float water;
-    private float maxWater;
-    private float heat;
-    private float maxHeat;
+
+        [SerializeField]private float water;
+        [SerializeField]private float maxWater;
+        [SerializeField]private float heat;
+        [SerializeField]private float maxHeat;
 
     public GameObject Pickup_script;
-    private Pickup Earth;
+    public Pickup Earth;
 
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("UI script start");
         Earth = Pickup_script.GetComponent<Pickup>();
 
         water = Earth.water;
