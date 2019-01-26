@@ -6,10 +6,13 @@ public class UI : MonoBehaviour
     public Image waterImage;
     public Image warmthImage;
 
-    [SerializeField] private float water;
-    [SerializeField] private float maxWater;
-    [SerializeField] private float warmth;
-    [SerializeField] private float maxWarmth;
+    public float water;
+    public float maxWater;
+    public float warmth;
+    public float maxWarmth;
+
+    public Pickup pickupScript;
+    public GameObject Earth;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +24,13 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        waterImage.fillAmount = water/maxWater;
-        warmthImage.fillAmount = warmth/maxWarmth;
+        warmth = pickupScript.heat;
+        maxWarmth = pickupScript.maxHeat;
+        water = pickupScript.water;
+        maxWater = pickupScript.maxWater;
+
+
+        waterImage.fillAmount = water / maxWater;
+        warmthImage.fillAmount = warmth / maxWarmth;
     }
 }
