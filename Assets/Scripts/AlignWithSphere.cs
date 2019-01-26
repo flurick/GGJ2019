@@ -9,6 +9,7 @@ public class AlignWithSphere : MonoBehaviour
 
     void Update()
     {
-        transform.position = Quaternion.Euler(centerRot) * Vector3.forward * 50;
+        transform.position = Quaternion.Euler(centerRot) * Vector3.forward * 51;
+        
     }
 }
