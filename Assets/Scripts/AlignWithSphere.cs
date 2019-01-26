@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 [ExecuteInEditMode]
 public class AlignWithSphere : MonoBehaviour
@@ -19,7 +20,7 @@ public class AlignWithSphere : MonoBehaviour
         transform.position = Quaternion.Euler(centerRot) * Vector3.forward * 55;
         transform.eulerAngles = centerRot;
         
-        if (player)
+        if (player && EditorApplication.isPlaying)
         {
             transform.rotation = player.transform.rotation;
             Vector3 toPlayer = Vector3.Normalize(player.position);
