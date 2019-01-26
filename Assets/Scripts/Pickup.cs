@@ -17,7 +17,7 @@ public class Pickup : MonoBehaviour
     {
         heat = 100f;
         water = 100f; 
-        maxHeat = 100f;
+        
         maxWater = 100f;
         waterGain = 30f;
         heatGain = 10f; 
@@ -43,24 +43,23 @@ public class Pickup : MonoBehaviour
             heat -= heatLoss * Time.deltaTime;
 
             animator.SetFloat("heat", heat);
+
+            if (blackHoleToggle)
+            {
+                heatLoss = heatLoss + 10;
+
+                water -= waterLoss * Time.deltaTime; 
+            }
         }
 
-        else if (blackHoleToggle)
-        {
-            heat -= heatLoss * 2 * Time.deltaTime;
-            water -= waterLoss * 2 * Time.deltaTime;
-        }
+
 
         else if (heat <= 0 || water <= 0)
         {
             //SceneManager.LoadScene(SceneManager.GetActiveScene());
         }
 
-        else
-        {
-            heatToggle = false;
-        }
-
+   
 
     }
 
@@ -115,7 +114,8 @@ public class Pickup : MonoBehaviour
 
         else if (collision.gameObject.tag == "Blackhole")
         {
-            blackHoleToggle = true; 
+            blackHoleToggle = true;
+            Debug.Log("blackhole");
         }
     }
     void OnTriggerExit(Collider collision)
@@ -126,9 +126,15 @@ public class Pickup : MonoBehaviour
             {
                 heat = maxHeat;
             }
+            Debug.Log("i've exited");
             heatLoss = 10f; 
             heatToggle = false;
 
+        }
+
+       else if (collision.gameObject.tag == "Blackhole")
+        {
+            blackHoleToggle = false; 
         }
 
     }
