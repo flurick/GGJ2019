@@ -19,6 +19,9 @@ public class UI : MonoBehaviour
     {
         Debug.Log("UI script start");
 
+        Earth = GameObject.Find("Player");
+        pickupScript = Earth.GetComponent<Pickup>();
+
     }
 
     // Update is called once per frame
