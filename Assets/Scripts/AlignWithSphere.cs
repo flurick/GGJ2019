@@ -17,11 +17,11 @@ public class AlignWithSphere : MonoBehaviour
     void Update()
     {
         transform.position = Quaternion.Euler(centerRot) * Vector3.forward * 55;
-        //transform.eulerAngles = centerRot;
-        transform.rotation = GameObject.Find("Player").transform.rotation;
-
+        transform.eulerAngles = centerRot;
+        
         if (player)
         {
+            transform.rotation = player.transform.rotation;
             Vector3 toPlayer = Vector3.Normalize(player.position);
             float dotDistance = Vector3.Dot(toPlayer, transform.position);
 
