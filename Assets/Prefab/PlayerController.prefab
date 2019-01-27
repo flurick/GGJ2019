@@ -124,7 +124,7 @@ MonoBehaviour:
   heat: 100
   heatGain: 30
   maxHeat: 100
-  heatLoss: 10
+  heatLoss: 5
   blackHoleDamageH: 0
   heatToggle: 0
   blackHoleToggle: 0
