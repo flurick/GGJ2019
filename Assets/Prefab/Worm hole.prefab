@@ -18803,11 +18803,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 414588275397603667, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
-        type: 3}
-      propertyPath: m_Name
-      value: Worm hole
-      objectReference: {fileID: 0}
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18821,7 +18816,7 @@ PrefabInstance:
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 51
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 414588275397603664, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
         type: 3}
@@ -18862,6 +18857,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 414588275397603667, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
+        type: 3}
+      propertyPath: m_Name
+      value: Worm hole
+      objectReference: {fileID: 0}
+    - target: {fileID: 414588275397603667, guid: 1e393b8a507a96a48b5dbf9c499ab6d8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wormhole
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 414588275397603670, guid: 1e393b8a507a96a48b5dbf9c499ab6d8, type: 3}
