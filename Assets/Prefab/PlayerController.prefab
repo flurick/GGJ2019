@@ -129,6 +129,7 @@ MonoBehaviour:
   heatToggle: 0
   blackHoleToggle: 0
   earthLives: 0
+  nextLevel: 
   mySprite: {fileID: 0}
   spriteR: {fileID: 0}
   animator: {fileID: 0}
