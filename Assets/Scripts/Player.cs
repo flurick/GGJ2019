@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -26,5 +27,10 @@ public class Player : MonoBehaviour
         Vector3 movement = transform.rotation * new Vector3(-up, right);
 
         transform.RotateAround(Vector3.zero, -movement, moveSpeed * Time.deltaTime);
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Main menu");
+        }
     }
 }
