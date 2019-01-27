@@ -120,10 +120,12 @@ MonoBehaviour:
   maxWater: 100
   waterGain: 30
   waterLoss: 10
+  blackHoleDamageW: 0
   heat: 100
   heatGain: 30
   maxHeat: 100
   heatLoss: 10
+  blackHoleDamageH: 0
   heatToggle: 0
   blackHoleToggle: 0
   earthLives: 0
@@ -157,8 +159,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.84
-  m_Center: {x: -0.12, y: -0.35, z: 0}
+  m_Radius: 3.18
+  m_Center: {x: -0.12, y: -0.03, z: 0}
 --- !u!1 &635701122
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,6 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 15
+  randomRotStart: 1
 --- !u!1 &999752738
 GameObject:
   m_ObjectHideFlags: 0
