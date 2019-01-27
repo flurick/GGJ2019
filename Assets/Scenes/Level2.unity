@@ -340,7 +340,7 @@ PrefabInstance:
     - target: {fileID: 1304000228196970920, guid: 1e1b5d9f3c4d39143b5093fd1bd28137,
         type: 3}
       propertyPath: nextLevel
-      value: Level1
+      value: VictoryScreen
       objectReference: {fileID: 0}
     - target: {fileID: 1736261711, guid: 1e1b5d9f3c4d39143b5093fd1bd28137, type: 3}
       propertyPath: moveWithTransform
