@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+[RequireComponent(typeof(AudioSource))]
 public class Pickup : MonoBehaviour
 {
     public float water, maxWater, waterGain, waterLoss,blackHoleDamageW;
@@ -10,8 +12,11 @@ public class Pickup : MonoBehaviour
     public bool heatToggle,blackHoleToggle,earthLives = false;
 
 
-    public string nextLevel; 
-  
+    public string nextLevel;
+
+    public AudioClip iceCrack;
+    AudioSource audioSource;
+
 
     public Sprite mySprite; 
     public SpriteRenderer spriteR;
@@ -19,6 +24,8 @@ public class Pickup : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         blackHoleDamageH = 5;
          
         heat = 100f;
@@ -124,6 +131,7 @@ public class Pickup : MonoBehaviour
         {
 
             Debug.Log("It Works");
+            audioSource.PlayOneShot(iceCrack, 0.7f);
             Destroy(collision.gameObject);
             if (water <= maxWater)
             {
