@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -340,7 +340,7 @@ PrefabInstance:
     - target: {fileID: 1304000228196970920, guid: 1e1b5d9f3c4d39143b5093fd1bd28137,
         type: 3}
       propertyPath: nextLevel
-      value: LoseScreen
+      value: Level1
       objectReference: {fileID: 0}
     - target: {fileID: 1736261711, guid: 1e1b5d9f3c4d39143b5093fd1bd28137, type: 3}
       propertyPath: moveWithTransform
