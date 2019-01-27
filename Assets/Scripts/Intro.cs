@@ -24,10 +24,21 @@ public class Intro : MonoBehaviour
     {
         if(IntroPicture.position.y < 900){
             transform.Translate(0f, scrollSpeed, 0f);
-        }else{
+            if (Input.GetKeyDown("space"))
+            {
+                scrollSpeed = 1.5f;
+            }
+            else if (Input.GetKeyUp("space"))
+            {
+                scrollSpeed = 0.5f; 
+            }
+
+        }
+        else{
             SceneManager.LoadScene("Level1");
         }
         
+
 
     }
 
