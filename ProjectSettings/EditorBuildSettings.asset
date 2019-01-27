@@ -17,16 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoseScreen.unity
     guid: 9ba847d86a68afc4d93c12f472520c62
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Crash Test mehdi.unity
     guid: ec8fd76e48bd88e46b92374573640030
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DebugMex.unity
     guid: c6ec33533448fdb439bed3e0c7c05e0c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FiaTestScene.unity
     guid: c20e0e64cafaa9e4b9547071c0f7074d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HUD.unity
     guid: e3bc9400be70fda43bff12ceb43f85f3
   - enabled: 1
@@ -36,11 +36,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Level2.unity
     guid: 27def50bf80615947aa733ed978e356c
   - enabled: 0
-    path: Assets/Scenes/Lose Screen.unity
-    guid: f11c45dbc5a3b5a4689f50feb4c47479
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/MainMenu.unity
-    guid: 9be24412d5c683f49b81ec70014d56ce
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/VictoryScreen.unity
     guid: 0ee70d9579429f8448e8f27bb729c800
