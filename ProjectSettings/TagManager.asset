@@ -8,6 +8,7 @@ TagManager:
   - Water
   - Star
   - Blackhole
+  - Wormhole
   layers:
   - Default
   - TransparentFX
