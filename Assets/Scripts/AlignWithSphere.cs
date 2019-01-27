@@ -20,7 +20,7 @@ public class AlignWithSphere : MonoBehaviour
         transform.position = Quaternion.Euler(centerRot) * Vector3.forward * 55;
         transform.eulerAngles = centerRot;
         
-        if (player && EditorApplication.isPlaying)
+        if (player)
         {
             transform.rotation = player.transform.rotation;
             Vector3 toPlayer = Vector3.Normalize(player.position);
