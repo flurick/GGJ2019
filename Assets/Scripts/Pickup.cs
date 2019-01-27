@@ -9,8 +9,8 @@ public class Pickup : MonoBehaviour
     public float heat, heatGain, maxHeat, heatLoss,blackHoleDamageH;
     public bool heatToggle,blackHoleToggle,earthLives = false;
 
-    private float heatTotal; 
 
+    public string nextLevel; 
   
 
     public Sprite mySprite; 
@@ -19,10 +19,10 @@ public class Pickup : MonoBehaviour
 
     void Start()
     {
-      
+        blackHoleDamageH = 5;
+         
         heat = 100f;
-        water = 100f; 
-        
+        water = 100f;
         maxWater = 100f;
         waterGain = 30f;
         heatGain = 10f; 
@@ -128,7 +128,7 @@ public class Pickup : MonoBehaviour
             if (water <= maxWater)
             {
                 water += waterGain;
-                Debug.Log(water);
+          
 
                 if (water >= maxWater)
                 {
@@ -147,6 +147,11 @@ public class Pickup : MonoBehaviour
         {
             blackHoleToggle = true;
             Debug.Log("blackhole");
+        }
+
+        else if (collision.gameObject.tag == "Wormhole")
+        {
+            SceneManager.LoadScene(nextLevel, LoadSceneMode.Single);
         }
     }
     void OnTriggerExit(Collider collision)
@@ -174,13 +179,7 @@ public class Pickup : MonoBehaviour
 
     void PlayerDeath()
     {
-        SceneManager.LoadScene("Level1", LoadSceneMode.Single);
-    }
-
-
-    void RedHealthLoss()
-    {
-
+        SceneManager.LoadScene("LoseScreen", LoadSceneMode.Single);
     }
 
 
