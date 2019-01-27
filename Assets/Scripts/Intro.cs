@@ -22,7 +22,7 @@ public class Intro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(IntroPicture.position.y < 700){
+        if(IntroPicture.position.y < 900){
             transform.Translate(0f, scrollSpeed, 0f);
         }else{
             SceneManager.LoadScene("Level1");
