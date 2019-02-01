@@ -23,8 +23,9 @@ public class Player : MonoBehaviour
         float up = Input.GetAxis("Vertical");
         float right = Input.GetAxis("Horizontal");
 
-        Vector3 movement = transform.rotation * new Vector3(-up, right);
+        Vector3 movement = transform.rotation * new Vector3(up, -right);
+        gameObject.transform.Find("Player").GetComponent<SpriteRenderer>().flipX = right>0;
 
-        transform.RotateAround(Vector3.zero, -movement, moveSpeed * Time.deltaTime);
+        transform.RotateAround(Vector3.zero, movement, moveSpeed * Time.deltaTime);
     }
 }
